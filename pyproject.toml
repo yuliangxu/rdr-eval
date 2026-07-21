@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rdr-eval"
+version = "0.1.0"
+description = "A lightweight Python package for relative density ratio (RDR) estimation and generative-model comparison."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    {name = "Yuliang Xu"},
+    {name = "Yun Wei"},
+    {name = "Li Ma"},
+]
+dependencies = ["torch>=2.0", "numpy>=1.24"]
+keywords = ["density-ratio", "generative-models", "pytorch", "distribution-evaluation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.optional-dependencies]
+examples = ["matplotlib>=3.7"]
+dev = ["build>=1.2", "pytest>=7", "twine>=5"]
+docs = [
+    "furo>=2024.8",
+    "matplotlib>=3.7",
+    "sphinx>=7",
+    "sphinx-gallery>=0.17",
+]
+
+[project.urls]
+Repository = "https://github.com/yuliangxu/rdr-eval"
+Documentation = "https://yuliangxu.github.io/rdr-eval/"
+Paper = "https://arxiv.org/abs/2510.25507"
+
+[tool.setuptools.packages.find]
+include = ["rdr", "rdr.*"]
+exclude = ["examples*", "tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

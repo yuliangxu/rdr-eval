@@ -12,21 +12,6 @@ differ.
 
 # %%
 # Author: RDR contributors
-# local check
-import sys
-from pathlib import Path
-
-PROJECT_ROOT = Path(
-    "/Users/yxu296/Library/Mobile Documents/com~apple~CloudDocs/"
-    "MyDrive/Research/DensityRatio/Code/Package"
-)
-
-sys.path.insert(0, str(PROJECT_ROOT))
-
-import rdr
-print(rdr.__file__)
-
-from rdr import Divergence, RDRTrainer
 # %%
 # Imports and helpers
 # -------------------
